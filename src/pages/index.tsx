@@ -104,12 +104,13 @@ function Home({ ip }: InferGetServerSidePropsType<typeof getServerSideProps>) {
                   onSubmit={async (e) => {
                     e.preventDefault();
                     let url = searchBox;
+                    setSearchBox("");
+                    setResult("Loading...");
                     if (!url.includes(".")) {
                       url += ".com";
                     }
                     const res = await whois.mutateAsync(url);
                     setResult(res);
-                    setSearchBox("");
                   }}
                 >
                   <div className="min-w-0 flex-1">

@@ -4,7 +4,11 @@ const whois = require("whois"); // eslint-disable-line
 
 export const mainRouter = router({
   whois: publicProcedure.input(z.string()).mutation(async ({ input }) => {
-    return await lookup(input);
+    try {
+      return await lookup(input);
+    } catch (error) {
+      console.log(error);
+    }
   }),
 });
 
