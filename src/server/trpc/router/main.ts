@@ -1,9 +1,9 @@
 import { z } from "zod";
 import { router, publicProcedure } from "../trpc";
-const whois = require("whois");
+const whois = require("whois"); // eslint-disable-line
 
 export const mainRouter = router({
-  whois: publicProcedure.input(z.string()).mutation(async ({ ctx, input }) => {
+  whois: publicProcedure.input(z.string()).mutation(async ({ input }) => {
     return await lookup(input);
   }),
 });

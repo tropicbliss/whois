@@ -1,8 +1,8 @@
-import { GetServerSideProps, type NextPage } from "next";
+import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import { GlobeAsiaAustraliaIcon } from "@heroicons/react/24/solid";
 import "@fontsource/inter";
-import { InferGetServerSidePropsType } from "next";
+import type { InferGetServerSidePropsType } from "next";
 
 import { trpc } from "../utils/trpc";
 import { useState } from "react";
