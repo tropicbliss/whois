@@ -6,7 +6,6 @@ import {
 } from "@heroicons/react/24/solid";
 import "@fontsource/inter";
 import type { InferGetServerSidePropsType } from "next";
-
 import { trpc } from "../utils/trpc";
 import { Fragment, useState } from "react";
 import Link from "next/link";
