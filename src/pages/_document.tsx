@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="h-full">
         <Head>
-          <title>Whois</title>
           <meta
             name="description"
             content="Yet another domain/IP lookup tool"
