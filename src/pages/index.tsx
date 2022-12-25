@@ -5,6 +5,7 @@ import type { InferGetServerSidePropsType } from "next";
 
 import { trpc } from "../utils/trpc";
 import { useState } from "react";
+import Link from "next/link";
 
 function Home({ ip }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const whois = trpc.main.whois.useMutation();
@@ -150,7 +151,12 @@ function Home({ ip }: InferGetServerSidePropsType<typeof getServerSideProps>) {
       <footer className="bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center sm:justify-end">
-            <a href="" className="text-gray-400 hover:text-gray-500">
+            <Link
+              href="https://github.com/tropicbliss/whois"
+              className="text-gray-400 hover:text-gray-500"
+              target="_blank"
+              rel="noreferrer"
+            >
               <span className="sr-only">GitHub</span>
               <svg
                 fill="currentColor"
@@ -164,7 +170,7 @@ function Home({ ip }: InferGetServerSidePropsType<typeof getServerSideProps>) {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </footer>
