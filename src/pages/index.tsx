@@ -15,7 +15,11 @@ function Home({ ip }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const whois = trpc.main.whois.useMutation({
     cacheTime: 5000,
     onError: (e) => {
-      setToastData(e.data?.code as string);
+      if (e.data) {
+        setToastData(e.data.code as string);
+      } else {
+        setToastData("An unknown error occurred.");
+      }
       setResult(null);
     },
   });
