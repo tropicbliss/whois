@@ -29,7 +29,7 @@ function Home({ ip }: InferGetServerSidePropsType<typeof getServerSideProps>) {
 
   return (
     <>
-      <header className="flex select-none items-center space-x-3 bg-indigo-600 px-4 py-6 text-xl text-white sm:px-6 sm:text-2xl lg:px-8">
+      <header className="flex select-none items-center space-x-3 bg-indigo-600 px-4 py-3 text-xl text-white sm:px-6 sm:text-2xl lg:px-8">
         <GlobeAsiaAustraliaIcon className="h-10 w-auto" />
         <span className="font-bold">Whois</span>
       </header>
