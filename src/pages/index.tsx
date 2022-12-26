@@ -159,6 +159,7 @@ function Home({ ip }: InferGetServerSidePropsType<typeof getServerSideProps>) {
                       >
                         {ip}
                       </span>
+                      .
                     </p>
                   )}
                 </div>
