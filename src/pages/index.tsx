@@ -168,6 +168,9 @@ function Home({ ip }: InferGetServerSidePropsType<typeof getServerSideProps>) {
                   onSubmit={async (e) => {
                     e.preventDefault();
                     let url = searchBox;
+                    if (!url) {
+                      return;
+                    }
                     setSearchBox("");
                     setResult("Loading...");
                     if (!url.includes(".")) {
