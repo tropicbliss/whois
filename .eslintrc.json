@@ -4,13 +4,11 @@
     "project": "./tsconfig.json"
   },
   "plugins": [
-    "@typescript-eslint",
-    "eslint-plugin-next-on-pages"
+    "@typescript-eslint"
   ],
   "extends": [
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:eslint-plugin-next-on-pages/recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
     "@typescript-eslint/consistent-type-imports": "warn"
